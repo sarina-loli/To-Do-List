@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>
+    My Tasks
+</h1>
+
+<form method="GET">
+
+    <input type="text"
+           name="q"
+           placeholder="Search task">
+
+    <button type="submit"
+            class="btn">
+
+        Search
+
+    </button>
+
+</form>
+
+<br>
+
+<a href="{% url 'create_task' %}"
+   class="btn">
+
+    Add Task
+
+</a>
+
+<br><br>
+
+{% for task in tasks %}
+
+<div class="card">
+
+    <h3>{{ task.title }}</h3>
+
+    <p>{{ task.description }}</p>
+
+    <p>
+        Created:
+        {{ task.created_at }}
+    </p>
+
+    <p>
+        Updated:
+        {{ task.updated_at }}
+    </p>
+
+    {% if task.completed %}
+
+        <p>Completed</p>
+
+        <a href="{% url 'incomplete_task' task.id %}"
+           class="btn">
+
+            Mark Incomplete
+
+        </a>
+
+    {% else %}
+
+        <p>Incomplete</p>
+
+        <a href="{% url 'complete_task' task.id %}"
+           class="btn">
+
+            Mark Complete
+
+        </a>
+
+    {% endif %}
+
+    <a href="{% url 'update_task' task.id %}"
+       class="btn">
+
+       Edit
+
+    </a>
+
+    <a href="{% url 'delete_task' task.id %}"
+       class="btn">
+
+       Delete
+
+    </a>
+
+</div>
+
+{% empty %}
+
+<p>
+    No tasks found.
+</p>
+
+{% endfor %}
+
+{% endblock %}

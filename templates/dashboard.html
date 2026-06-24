@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>
+    Dashboard
+</h1>
+
+<div class="dashboard-grid">
+
+    <div class="card">
+
+        <h2>
+            Total Tasks
+        </h2>
+
+        <p>
+            {{ total_tasks }}
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>
+            Completed
+        </h2>
+
+        <p>
+            {{ completed_tasks }}
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>
+            Incomplete
+        </h2>
+
+        <p>
+            {{ incomplete_tasks }}
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}
