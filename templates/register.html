@@ -7,7 +7,9 @@
     <h2>
         Register
     </h2>
-
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
     <form method="POST">
 
         {% csrf_token %}
