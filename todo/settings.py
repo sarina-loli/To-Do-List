@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-s@(_f7oq2indm1mlzp&n(_vug&z5&8tndtldm95!2&w$d@hau3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "to-do-list-7yux.onrender.com",
@@ -36,7 +39,8 @@ CSRF_TRUSTED_ORIGINS = [
     "https://to-do-list-7yux.onrender.com",
 ]
 
-
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 # Application definition
 
 INSTALLED_APPS = [

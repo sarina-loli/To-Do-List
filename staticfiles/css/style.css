@@ -9,7 +9,7 @@
 }
 
 body{
-    background:#FFFAFA;
+    background:#FAF3E9;
     font-family:Arial, sans-serif;
     min-height:100vh;
     display:flex;
@@ -33,7 +33,8 @@ body{
 ========================= */
 
 .navbar{
-    background:#87CEEB;
+    background:#5C4033;
+    color:#FAF3E9;
     padding:20px;
 
     display:flex;
@@ -57,7 +58,8 @@ body{
 .nav-links a{
     text-decoration:none;
 
-    background:#89CFF0;
+    background:#D9765C;
+    color:#FAF3E9;
 
     padding:10px 15px;
 
@@ -65,7 +67,7 @@ body{
 }
 
 .nav-links a:hover{
-    background:#87CEEB;
+    background:#5C4033;
 }
 
 /* =========================
@@ -96,7 +98,8 @@ body{
 
     text-decoration:none;
 
-    background:#89CFF0;
+    background:#D9765C;
+    color:#FAF3E9;
 
     padding:12px 20px;
 
@@ -108,7 +111,7 @@ body{
 }
 
 .btn:hover{
-    background:#87CEEB;
+    background:#5C4033;
 }
 
 /* =========================
@@ -116,7 +119,8 @@ body{
 ========================= */
 
 .card{
-    background:#87CEEB;
+    background:#5C4033;
+    color:#FAF3E9;
 
     padding:25px;
 
@@ -153,7 +157,7 @@ select{
 
     padding:12px;
 
-    border:2px solid #89CFF0;
+    border:2px solid #D9765C;
 
     border-radius:8px;
 }
@@ -190,7 +194,8 @@ input[type="text"]{
 ========================= */
 
 footer{
-    background:#87CEEB;
+    background:#5C4033;
+    color:#FAF3E9;
 
     text-align:center;
 
